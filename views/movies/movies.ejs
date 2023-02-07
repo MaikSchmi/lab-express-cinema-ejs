@@ -1,0 +1,9 @@
+<h2>Movies</h2>
+<div>
+    <% allMovies.forEach(movie => { %>
+        <div><img src="<%-movie.image%>"/></div>
+        <div>Title: <%-movie.title %></div>
+        <div><%-movie.description %></div>
+        <div><a href="/movies/<%-movie._id%>">See more</a></div>
+    <% }) %>
+</div>

@@ -1,0 +1,23 @@
+<h2>Movies List</h2>
+<% allMovies.forEach(movie => { %>
+    <div>
+        <div>Title: <%-movie.title %></div>
+        <div>Director: <%-movie.director %></div>
+        <div>
+            <ul>
+            <% movie.stars.forEach(star => { %>
+                <li><%-star%></li>
+            <% }) %>
+            </ul>
+        </div>
+        <div><img src="<%-movie.image%>"/></div>
+        <div><%-movie.description %></div>
+        <div>
+            <ul>
+            <% movie.showtimes.forEach(time => { %>
+                <li><%-time%></li>
+            <% }) %>
+            </ul>
+        </div>
+    </div>
+<% }) %>

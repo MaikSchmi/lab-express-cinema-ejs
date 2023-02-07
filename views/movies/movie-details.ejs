@@ -1,0 +1,21 @@
+<h2>Movie Details</h2>
+<div>
+    <div>Title: <%-movie.title %></div>
+    <div>Director: <%-movie.director %></div>
+    <div>
+        <ul>
+        <% movie.stars.forEach(star => { %>
+            <li><%-star%></li>
+        <% }) %>
+        </ul>
+    </div>
+    <div><img src="<%-movie.image%>"/></div>
+    <div><%-movie.description %></div>
+    <div>
+        <ul>
+        <% movie.showtimes.forEach(time => { %>
+            <li><%-time%></li>
+        <% }) %>
+        </ul>
+    </div>
+</div>
